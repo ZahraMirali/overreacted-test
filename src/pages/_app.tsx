@@ -1,16 +1,15 @@
 import '../styles/globals.css';
 import { useMemo } from 'react';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { ThemeProvider, CssBaseline, Typography, Switch } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { getDesignTokens } from '../configs/theme';
-import { useAppSelector } from '../app/hooks';
-import { selectTheme } from '../app/themeSlice';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { toggle, selectTheme } from '../app/themeSlice';
 
 import { Provider } from 'react-redux';
 import type { AppProps } from 'next/app';
 
 import store from '../app/store';
-import Theme from '../features/theme/Theme';
 
 export default function MyApp(props: AppProps) {
   return (
@@ -21,6 +20,7 @@ export default function MyApp(props: AppProps) {
 }
 
 function ThemeApp({ Component, pageProps }: AppProps) {
+  const dispatch = useAppDispatch();
   const mode = useAppSelector(selectTheme);
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
@@ -28,7 +28,10 @@ function ThemeApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <header>
-        <Theme />
+        <Typography component='h1' variant='h4'>
+          Overreacted
+        </Typography>
+        <Switch checked={mode === 'dark'} onChange={() => dispatch(toggle())} />
       </header>
       <Component {...pageProps} />
     </ThemeProvider>

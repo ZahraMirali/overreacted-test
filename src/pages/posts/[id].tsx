@@ -3,15 +3,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { PostPageProps, Post } from '../../types';
 
-const createCups = (count: number) => {
-  let result = [];
-
-  for (let i = 0; i < Math.floor(count / 5); i++) {
-    result.push('☕️');
-  }
-  return result;
-};
-
 const PostPage: NextPage = ({ post }: PostPageProps) => {
   return (
     <div>
@@ -25,11 +16,6 @@ const PostPage: NextPage = ({ post }: PostPageProps) => {
         ) : (
           <Box>
             <Typography>{post.title}</Typography>
-            <Typography>
-              {post.date}
-              {createCups(post.readTime)}
-              {post.readTime} min read
-            </Typography>
             <Typography>{post.body}</Typography>
           </Box>
         )}

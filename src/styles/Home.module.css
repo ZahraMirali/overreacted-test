@@ -1,0 +1,50 @@
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.author img {
+  border-radius: 50%;
+}
+
+.author p {
+  max-width: 13rem;
+  margin-left: 1rem;
+}
+
+.author a {
+  box-shadow: 0 1px 0 0 currentColor;
+  font-size: 1rem;
+}
+
+.author span {
+  font-size: 1rem;
+}
+
+.post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  font-family: Montserrat;
+}
+
+.post p {
+  margin-top: 0.5rem;
+}
+
+.footer {
+  margin-top: 4.375rem;
+}
+
+.footer span {
+  font-size: 1rem;
+}
+
+.footer a {
+  box-shadow: 0 1px 0 0 currentColor;
+}
+
+.footer a:last-child {
+  float: right;
+}
