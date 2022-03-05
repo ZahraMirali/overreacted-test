@@ -7,21 +7,19 @@ class MyDocument extends Document {
         <Head>
           <link
             rel='preload'
-            href='/fonts/Merriweather-SemiBold.woff2'
+            href='/fonts/Merriweather.woff2'
             as='font'
             crossOrigin='anonymous'
           ></link>
+          <link rel='preconnect' href='https://fonts.googleapis.com'></link>
           <link
-            rel='preload'
-            href='/fonts/Merriweather-Regular.woff2'
-            as='font'
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
             crossOrigin='anonymous'
           ></link>
           <link
-            rel='preload'
-            href='/fonts/Montserrat.woff2'
-            as='font'
-            crossOrigin='anonymous'
+            href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap'
+            rel='stylesheet'
           ></link>
         </Head>
         <body>

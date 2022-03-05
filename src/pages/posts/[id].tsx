@@ -2,6 +2,8 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { PostPageProps, Post } from '../../types';
+import styles from '../../styles/Post.module.css';
+import PrimaryTypography from '../../components/PrimaryTypography';
 
 const PostPage: NextPage = ({ post }: PostPageProps) => {
   return (
@@ -14,8 +16,8 @@ const PostPage: NextPage = ({ post }: PostPageProps) => {
         {post === undefined ? (
           <CircularProgress />
         ) : (
-          <Box>
-            <Typography>{post.title}</Typography>
+          <Box className={styles.post}>
+            <PrimaryTypography variant='h3'>{post.title}</PrimaryTypography>
             <Typography>{post.body}</Typography>
           </Box>
         )}

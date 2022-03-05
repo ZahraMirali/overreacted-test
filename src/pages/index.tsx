@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IndexPageProps, Post } from '../types';
 import styles from '../styles/Home.module.css';
+import PrimaryTypography from '../components/PrimaryTypography';
 
 const createCups = (count: number) => {
   let result = [];
@@ -32,9 +33,9 @@ const IndexPage: NextPage = ({ posts }: IndexPageProps) => {
           />
           <Typography>
             Personal blog by{' '}
-            <Typography variant='h3' component='span'>
+            <PrimaryTypography component='span'>
               <a href='https://mobile.twitter.com/dan_abramov'>Dan Abramov</a>
-            </Typography>
+            </PrimaryTypography>
             . I explain with words and code.
           </Typography>
         </Box>
@@ -45,7 +46,9 @@ const IndexPage: NextPage = ({ posts }: IndexPageProps) => {
             <Box key={item.id} className={styles.post}>
               <Link href={`/posts/${item.id}`}>
                 <a>
-                  <Typography variant='h3'>{item.title}</Typography>
+                  <PrimaryTypography variant='h3'>
+                    {item.title}
+                  </PrimaryTypography>
                 </a>
               </Link>
               <Typography variant='caption'>
@@ -62,14 +65,22 @@ const IndexPage: NextPage = ({ posts }: IndexPageProps) => {
         )}
       </main>
       <footer className={styles.footer}>
-        <Typography variant='h3' component='span'>
-          <a href='https://mobile.twitter.com/dan_abramov'>twitter</a> •{' '}
-          <a href='https://github.com/gaearon'>github</a> •{' '}
+        <PrimaryTypography component='span'>
+          <a href='https://mobile.twitter.com/dan_abramov'>twitter</a>
+        </PrimaryTypography>{' '}
+        •{' '}
+        <PrimaryTypography component='span'>
+          <a href='https://github.com/gaearon'>github</a>
+        </PrimaryTypography>{' '}
+        •{' '}
+        <PrimaryTypography component='span'>
           <a href='https://stackoverflow.com/users/458193/dan-abramov'>
             stack overflow
           </a>
+        </PrimaryTypography>
+        <PrimaryTypography component='span'>
           <a href='https://overreacted.io/rss.xml'>rss</a>
-        </Typography>
+        </PrimaryTypography>
       </footer>
     </div>
   );

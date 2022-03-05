@@ -15,18 +15,13 @@
 
 .author a {
   box-shadow: 0 1px 0 0 currentColor;
-  font-size: 1rem;
-}
-
-.author span {
-  font-size: 1rem;
 }
 
 .post h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-top: 3rem;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
 }
 
 .post p {
@@ -37,14 +32,10 @@
   margin-top: 4.375rem;
 }
 
-.footer span {
-  font-size: 1rem;
-}
-
 .footer a {
   box-shadow: 0 1px 0 0 currentColor;
 }
 
-.footer a:last-child {
+.footer span:last-child {
   float: right;
 }

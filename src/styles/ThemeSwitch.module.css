@@ -1,0 +1,18 @@
+.switch {
+  position: relative;
+}
+
+.switch div:first-child + span {
+  padding-top: 8px;
+  height: 42px;
+}
+
+.switch div:first-child + span span:last-child {
+  border-radius: 12px;
+}
+
+.switch div:first-child {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
